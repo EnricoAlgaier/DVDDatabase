@@ -10,9 +10,8 @@ import javax.swing.JOptionPane;
 public class DataBaseConnection {
 	public Statement statement;
 	public Connection connection;
-	
 
-	private static final String JDBC_URL = "jdbc:mysql://localhost:3306/"; // Database path
+	private static final String JDBC_URL = ""; 
 	private static final String USERNAME = ""; 
 	private static final String PASSWORD = "";
 

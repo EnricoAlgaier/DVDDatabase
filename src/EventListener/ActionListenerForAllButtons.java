@@ -28,20 +28,20 @@ public class ActionListenerForAllButtons implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String buttonName = ((JButton) e.getSource()).getText();
-
-		if ("Alles Anzeigen".equals(buttonName)) {
+	
+		if ("Show all".equals(buttonName)) {
 			data.queryData();
-
-		} else if ("Neuer Eintrag".equals(buttonName)) {
+			
+		} else if ("New entry".equals(buttonName)) {
 			inputButton = new InsertFrameButton();
 
-		} else if ("Eintrag Ändern".equals(buttonName)) {
+		} else if ("New change".equals(buttonName)) {
 			frameForChange = new FrameForChange();
 
-		} else if ("Löschen".equals(buttonName)) {
+		} else if ("Delete entry".equals(buttonName)) {
 			deleteFrameButton = new DeleteFrameButton();
 		}
-		else if ("Suchen".equals(buttonName)) {
+		else if ("Search".equals(buttonName)) {
 			searchDatabase.searchDatabase();
 		}
 	}

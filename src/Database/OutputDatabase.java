@@ -18,15 +18,15 @@ public class OutputDatabase {
 
 		try {
 			ResultSet resultSet = connectionData.statement.executeQuery("SELECT * FROM dvd");
-
+			
 			scrollBar.getTableModel().setRowCount(0);
 
 			while (resultSet.next()) {
 				int id = resultSet.getInt("id");
 				String dvdName = resultSet.getString("dvdName");
-				String storageLocation = resultSet.getString("storageLocation");
-				int createYear = resultSet.getInt("createYear");
-				String actors = resultSet.getString("actors");
+				String storageLocation = resultSet.getString("lagerort");
+				int createYear = resultSet.getInt("erstellungsjahr");
+				String actors = resultSet.getString("schauspieler");
 				String genre = resultSet.getString("genre");
 
 				scrollBar.getTableModel()

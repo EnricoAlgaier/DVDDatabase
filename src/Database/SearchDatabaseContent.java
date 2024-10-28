@@ -23,7 +23,7 @@ public class SearchDatabaseContent {
 		searchTerm = searchField.getContent();
 
 		try {
-			String query = "SELECT * FROM dvd WHERE id LIKE ? OR dvdName LIKE ? OR storageLocation LIKE ? OR createYear LIKE ? OR actors LIKE ? OR genre LIKE ?";
+			String query = "SELECT * FROM dvd WHERE id LIKE ? OR dvdName LIKE ? OR lagerort LIKE ? OR erstellungsjahr LIKE ? OR schauspieler LIKE ? OR genre LIKE ?";
 			PreparedStatement preparedStatement = connectionData.connection.prepareStatement(query);
 
 			for (int i = 1; i <= 6; i++) {
@@ -37,9 +37,9 @@ public class SearchDatabaseContent {
 			while (resultSet.next()) {
 				int id = resultSet.getInt("id");
 				String dvdName = resultSet.getString("dvdName");
-				String storageLocation = resultSet.getString("storageLocation");
-				int createYear = resultSet.getInt("createYear");
-				String actors = resultSet.getString("actors");
+				String storageLocation = resultSet.getString("lagerort");
+				int createYear = resultSet.getInt("erstellungsjahr");
+				String actors = resultSet.getString("schauspieler");
 				String genre = resultSet.getString("genre");
 
 				scrollBar.getTableModel()
