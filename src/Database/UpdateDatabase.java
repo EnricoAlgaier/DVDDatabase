@@ -22,7 +22,7 @@ public class UpdateDatabase {
 
 		try {
 			connectionData.connectDatabase();
-			String updateQuery = "UPDATE dvd SET `dvdName` = ?, storageLocation = ?, createYear = ?, actors = ?, genre = ? WHERE id = ?";
+			String updateQuery = "UPDATE dvd SET `dvdName` = ?, lagerort = ?, erstellungsjahr = ?, schauspieler = ?, genre = ? WHERE id = ?";
 			PreparedStatement preparedStatement = connectionData.connection.prepareStatement(updateQuery);
 
 			preparedStatement.setString(1, changeFields[1].getText());

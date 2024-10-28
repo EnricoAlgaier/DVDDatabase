@@ -25,7 +25,7 @@ public class InsertDatabase {
 
 		try {
 			connectionData.connectDatabase();
-			String insertQuery = "INSERT INTO dvd (`dvdName`, `storageLocation`, `createYear`, `actors`, `genre`) VALUES (?, ?, ?, ?, ?)";
+			String insertQuery = "INSERT INTO dvd (`dvdName`, `lagerort`, `erstellungsjahr`, `schauspieler`, `genre`) VALUES (?, ?, ?, ?, ?)";
 			PreparedStatement preparedStatement = connectionData.connection.prepareStatement(insertQuery);
 
 			dvdName = inserTextFields[0].getText();
