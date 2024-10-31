@@ -13,7 +13,7 @@ public class DataBaseConnection {
 
 	private static final String JDBC_URL = "jdbc:mysql://angebotsinfo.de:3306/DvdDatabase"; 
 	private static final String USERNAME = "DvdDatabase"; 
-	private static final String PASSWORD = "jTHyxMF]f(.lnJUo";
+	private static final String PASSWORD = "";
 
 	public void connectDatabase() {
 		try {
